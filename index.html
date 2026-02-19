@@ -65,6 +65,7 @@
     <div class="sub">
       <span class="pill">제작자 : 이준혁</span>
       <span class="pill">직변권 좀..</span>
+      <span class="pill">농장도 비율은 같음..</span>
     </div>
 
     <div class="grid">
@@ -231,7 +232,7 @@
     if (!out.plan || out.k <= 0) {
       result.innerHTML =
 `[${costs.name}] 최대 제작 결과
-- 최대 제작: 0개
+- 최대 제작 : 0개
 
 입력 값으로는 1회 제작도 불가능합니다.
 필요: 아비도스 목재(원목) ${costs.A}개, 부드러운 목재 ${costs.S}개, 목재(원목) ${costs.W}개`;
@@ -243,15 +244,17 @@
 
     result.innerHTML =
 `[${costs.name}] 최대 제작 결과
-- 최대 제작: ${craftedItems}개  (10개 제작 <span class="num">${out.k}</span>회)
+- 최대 제작 : ${craftedItems}개  (10개 제작 <span class="num">${out.k}</span>회)
 
-[사용한 교환]
+[생활 재료 교환]
 - 부드러운 목재 25개 -> 목재 50개 : <span class="num">${out.plan.sw}</span>회
 - 튼튼한 목재 5개 -> 목재 50개 : <span class="num">${out.plan.tToW}</span>회
 
+[생활 가루 구입]
 - 목재 100개 -> 벌목의 가루 80개 : <span class="num">${out.plan.xw}</span>회
 - 부드러운 목재 50개 -> 벌목의 가루 80개 : <span class="num">${out.plan.xs}</span>회
 
+[생활 가루 사용]
 - 벌목의 가루 100개 -> 아비도스 목재 10개 : <span class="num">${out.plan.a10Needed}</span>회
 
 [최종 잔량]
